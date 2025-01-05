@@ -91,7 +91,7 @@ To contribute or build this extension locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/slurm-param-generator.git
+   git clone https://github.com/bwentzloff/smartSlurm.git
    cd slurm-param-generator
    ```
 2. Install dependencies:
