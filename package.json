@@ -1,0 +1,59 @@
+{
+  "name": "smartslurm",
+  "displayName": "smartslurm",
+  "description": "",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.generateSlurmParams"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+        "type": "object",
+        "title": "Slurm Parameter Generator Settings",
+        "properties": {
+            "slurmParamGenerator.apiKey": {
+                "type": "string",
+                "default": "",
+                "description": "API key for the AI service used to generate Slurm parameters. Required for the extension to work."
+            },
+            "slurmParamGenerator.apiEndpoint": {
+                "type": "string",
+                "default": "https://api.openai.com/v1/completions",
+                "description": "The endpoint of the AI service to use for generating Slurm parameters."
+            }
+        }
+    },
+    "commands": [
+        {
+            "command": "extension.generateSlurmParams",
+            "title": "Generate Slurm Parameters"
+        }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
