@@ -2,6 +2,8 @@
 
 Automate the generation of Slurm parameters for your HPC bash scripts using AI! This VSCode extension analyzes your bash scripts and predicts optimal Slurm parameters such as memory, time, and CPUs. Save time, avoid guesswork, and ensure efficient resource allocation.
 
+![Slurm Parameter Generator Demo](demo.gif)
+
 ---
 
 ## **Features**
